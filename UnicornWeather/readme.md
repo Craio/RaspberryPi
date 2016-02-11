@@ -32,12 +32,20 @@ The URL for Glasgow, Scotland would be `https://forecast.io/#/f/55.8578,-4.2425`
 
 The part we are interested in would be `55.8578,-4.2425`
 
-Where `55.8578` is the longitude and `-4.2425` is the latitude. These values are set to the `lat` and `lng` variables in the script respectfully.
+Where `55.8578` is the longitude and `-4.2425` is the latitude. These values are set to the `lat` and `lng` variables within the script respectfully.
 
 
 ---
 
 The images called by this script are just regular 8 pixels by 8 pixels, you can modify these to display anything you'd like. 
+
+
+---
+
+Once you have set up your API Key and have your longitude and latitude in the script you can now run it! Open your terminal and change directories to where the script is located, then use the following command to show the current weather status on your bright LED display!
+````bash
+sudo python unicornweather.py
+````
 
 
 Additional notes
@@ -76,6 +84,6 @@ GitHub user [ZeevG](https://github.com/ZeevG/) for writing the](https://github.c
 
 I guess some to [me](https://github.com/Craio/) but really all the hard work was done by the people above!
 
-Licence
+License
 -------
-I'm not super keen on crazy licence restrictions and limitations, you can do whatever you want with this project, go nuts!
+I'm not super keen on crazy license restrictions and limitations, you can do whatever you want with this project, go nuts!
