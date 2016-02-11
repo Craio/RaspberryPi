@@ -6,7 +6,7 @@
 ##	 			 \___/|_| |_|_|\___\___/|_|  |_| |_|\/  \/ \___|\__,_|\__|_| |_|\___|_|
 ## 
 ##	Code by:
-##			https://github.com/craio/
+##			https://github.com/Craio/
 ##			https://github.com/pimoroni/unicorn-hat/		
 ##			https://github.com/ZeevG/python-forecast.io/
 ##
