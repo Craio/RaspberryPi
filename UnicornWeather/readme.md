@@ -1,6 +1,6 @@
 UnicornWeather
 =============
-This python script will display the current weather status by means of an icon on your UnicornHAT, a Raspberry Pi attatchment. This information is pulled from [Forecast.io](https://forecast.io/).
+This python script will display the current weather status by means of an icon on your UnicornHAT, a Raspberry Pi attachment. This information is pulled from [Forecast.io](https://forecast.io/).
 
 Installation
 -------
@@ -18,13 +18,13 @@ install pip install python-forecastio
 
 Usage
 -------
-(Just as a note before we get started, check out [ZeevG's ReadMe](https://github.com/ZeevG/python-forecast.io) here for a more detailed explination of how their project is used and how this integates with UnicornWeather)
+(Just as a note before we get started, check out [ZeevG's ReadMe](https://github.com/ZeevG/python-forecast.io) here for a more detailed explanation of how their project is used and how this integrates with UnicornWeather)
 
 ---
 
 In order to use this script you will need a free [Forecast.io Developer account](https://developer.forecast.io/) and the longitude and latitude of the location you are interested in gathering weather information.
 
-You can find the longitude and latiitude from the Forecast.io website by seaching for your location and taking note of the URL.
+You can find the longitude and latitude from the Forecast.io website by searching for your location and taking note of the URL.
 
 For Example:
 
@@ -32,7 +32,7 @@ The URL for Glasgow, Scotland would be `https://forecast.io/#/f/55.8578,-4.2425`
 
 The part we are interested in would be `55.8578,-4.2425`
 
-Where `55.8578` is the longitude and `-4.2425` is the latitidue. These values are set to the `lat` and `lng` variables in the script respectfuly.
+Where `55.8578` is the longitude and `-4.2425` is the latitude. These values are set to the `lat` and `lng` variables in the script respectfully.
 
 
 ---
@@ -68,7 +68,7 @@ Currently the script is set to call information every 120 seconds or every two m
 
 Credits
 -------
-[Pimoroni](https://pimoroni.com/) for writing the [Library for UnicornHAT](https://github.com/pimoroni/unicorn-hat) and providing excelent examples on how to use this awesome little device!
+[Pimoroni](https://pimoroni.com/) for writing the [Library for UnicornHAT](https://github.com/pimoroni/unicorn-hat) and providing excellent examples on how to use this awesome little device!
 
 GitHub user [ZeevG](https://github.com/ZeevG/) for writing the](https://github.com/ZeevG/python-forecast.io)
 

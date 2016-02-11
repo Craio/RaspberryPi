@@ -75,7 +75,7 @@ def weatherloop():
 		for x in range(8):
 			for y in range(8):
 				pixel = imgcloud.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncoment line below to enable printing pixel information to console window
+                                # uncomment line below to enable printing pixel information to console window
 				#print(pixel)
 				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
 				unicorn.set_pixel(x, y, r, g, b)
@@ -91,7 +91,7 @@ def weatherloop():
 		for x in range(8):
 			for y in range(8):
 				pixel = imgsun.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncoment line below to enable printing pixel information to console window
+                                # uncomment line below to enable printing pixel information to console window
 				#print(pixel)
 				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
                                 unicorn.set_pixel(x, y, r, g, b)
@@ -108,7 +108,7 @@ def weatherloop():
 		for x in range(8):
 			for y in range(8):
 				pixel = imgmoon.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncoment line below to enable printing pixel information to console window
+                                # uncomment line below to enable printing pixel information to console window
 				#print(pixel)
 				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
 				unicorn.set_pixel(x, y, r, g, b)
@@ -125,7 +125,7 @@ def weatherloop():
 		for x in range(8):
 			for y in range(8):
 				pixel = imgrain.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncoment line below to enable printing pixel information to console window
+                                # uncomment line below to enable printing pixel information to console window
 				#print(pixel)
 				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
 				unicorn.set_pixel(x, y, r, g, b)
@@ -142,7 +142,7 @@ def weatherloop():
 		for x in range(8):
 			for y in range(8):
 				pixel = imgsnow.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncoment line below to enable printing pixel information to console window
+                                # uncomment line below to enable printing pixel information to console window
 				#print(pixel)
 				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
 				unicorn.set_pixel(x, y, r, g, b)
@@ -159,7 +159,7 @@ def weatherloop():
                 for x in range(8):
                         for y in range(8):
                                 pixel = imgwind.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncoment line below to enable printing pixel information to console window
+                                # uncomment line below to enable printing pixel information to console window
                                 #print(pixel)
                                 r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
                                 unicorn.set_pixel(x, y, r, g, b)
