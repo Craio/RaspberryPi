@@ -36,12 +36,12 @@ The URL for Glasgow, Scotland would be `https://forecast.io/#/f/55.8578,-4.2425`
 
 The part we are interested in would be `55.8578,-4.2425`
 
-Where `55.8578` is the longitude and `-4.2425` is the latitude. These values are set to the `lat` and `lng` variables within the script respectfully.
+Where `55.8578` is the latitude and `-4.2425` is the longitude. These values are set to the `lat` and `lng` variables within the script respectfully.
 
 
 ---
 
-The images called by this script are just regular 8 pixels by 8 pixels png files, you can modify the images included to display anything you like.
+The images called by this script are just regular 8 pixel by 8 pixel png files, you can modify the images included to display anything you like.
 
 
 ---
