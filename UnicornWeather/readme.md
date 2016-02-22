@@ -12,9 +12,13 @@ To install the UnicornHAT Library you'll want to use the following commands (Che
 You'll then want to install ZeevG's python wrapper for the forecast.io API (Check [here](https://github.com/ZeevG/python-forecast.io) if outdated):
 
 ````bash
-install pip install python-forecastio
+sudo pip install python-forecastio
 ````
 
+and then the bitarray library
+````bash
+sudo pip install bitarray
+````
 
 Usage
 -------
@@ -37,7 +41,7 @@ Where `55.8578` is the longitude and `-4.2425` is the latitude. These values are
 
 ---
 
-The images called by this script are just regular 8 pixels by 8 pixels, you can modify these to display anything you'd like.
+The images called by this script are just regular 8 pixels by 8 pixels png files, you can modify the images included to display anything you like.
 
 
 ---
@@ -72,7 +76,7 @@ You can change the brightness by modifying the numbers in the `unicorn.brightnes
 
 Another note, a free Forecast.io developer account will only allow for 1000 calls per day without cost. In order to stay under this limit it is important to make sure the numbers given in `time.sleep()` will not cause the script to call for information too often.
 
-Currently the script is set to call information every 120 seconds or every two minutes, this means the script will make a total of 720 calls per day, falling well below the free 1000 limit.
+Currently the script is set to call information, wait 60 seconds, then spend another 60 seconds displaying temperature information before calling for information again, this means the script will make somewhere around 720 calls per day, falling well below the free 1000 limit.
 
 Credits
 -------
@@ -80,10 +84,8 @@ Credits
 
 GitHub user [ZeevG](https://github.com/ZeevG/) for writing the [python wrapper for use with Forecast.io's API](https://github.com/ZeevG/python-forecast.io)!
 
+Github users [topshed](https://github.com/topshed/) and [xabertum](https://github.com/xabertum/) for their code for making the UnicornHAT show scrolling text, I have used this code a lot and modified it to work with this project but they deserve all the credit.
+
 [Forecast.io](http://forecast.io) for providing an easy to use API and for having a pretty cool website too! 
 
 I guess some to [me](https://github.com/Craio/) but really, all the hard work was done by the people above.
-
-License
--------
-I'm not super keen on crazy license restrictions and limitations, you can do whatever you want with this project, go nuts!
