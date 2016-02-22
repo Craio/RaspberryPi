@@ -11,11 +11,11 @@
 ##			https://github.com/craio/
 ##			https://github.com/pimoroni/unicorn-hat/		
 ##			https://github.com/ZeevG/python-forecast.io/
-##          https://github.com/xabertum/UnicornHatScroll 
-##          https://github.com/topshed/UnicornHatScroll
+##                      https://github.com/xabertum/UnicornHatScroll/
+##                      https://github.com/topshed/UnicornHatScroll/
 ##
 ##
-##	Check readme.md at https://github.com/Craio/RaspberryPi/blob/master/UnicornWeather/readme.md
+##	Check readme.md at https://github.com/Craio/RaspberryPi/blob/master/UnicornWeather/readme.md/
 ##	for information on how to use this. Forgive my bad code please!
 
 from random import randint
@@ -249,8 +249,6 @@ def weatherloop():
 		for x in range(8):
 			for y in range(8):
 				pixel = imgcloud.getpixel(((o_x*8)+y,(o_y*8)+x))
-                # uncomment line below to enable printing pixel information to console window
-				#print(pixel)
 				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
 				unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
@@ -277,8 +275,6 @@ def weatherloop():
 		for x in range(8):
 			for y in range(8):
 				pixel = imgsun.getpixel(((o_x*8)+y,(o_y*8)+x))
-                # uncomment line below to enable printing pixel information to console window
-				#print(pixel)
 				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
                                 unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
@@ -305,8 +301,6 @@ def weatherloop():
 		for x in range(8):
 			for y in range(8):
 				pixel = imgmoon.getpixel(((o_x*8)+y,(o_y*8)+x))
-                # uncomment line below to enable printing pixel information to console window
-				#print(pixel)
 				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
 				unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
@@ -333,8 +327,6 @@ def weatherloop():
 		for x in range(8):
 			for y in range(8):
 				pixel = imgrain.getpixel(((o_x*8)+y,(o_y*8)+x))
-                # uncomment line below to enable printing pixel information to console window
-				#print(pixel)
 				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
 				unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
@@ -361,8 +353,6 @@ def weatherloop():
 		for x in range(8):
 			for y in range(8):
 				pixel = imgsnow.getpixel(((o_x*8)+y,(o_y*8)+x))
-                # uncomment line below to enable printing pixel information to console window
-				#print(pixel)
 				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
 				unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
@@ -389,8 +379,6 @@ def weatherloop():
                 for x in range(8):
                         for y in range(8):
                                 pixel = imgwind.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncomment line below to enable printing pixel information to console window
-                                #print(pixel)
                                 r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
                                 unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
