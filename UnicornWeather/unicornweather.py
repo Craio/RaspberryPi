@@ -21,6 +21,7 @@
 from random import randint
 from PIL import Image
 from bitarray import bitarray
+from time import ctime
 import unicornhat as unicorn
 import forecastio, time, colorsys, signal, numpy, itertools
 from UHScroll_defs_lowercase import *
@@ -48,22 +49,26 @@ imgsnow = Image.open('img/weather_snow.png') # change this png to display snowfl
 imgwind = Image.open('img/weather_wind-line.png') # this can be swapped for 'weather_wind-turbine' if desired
  
 
-## Define weather conditions, this is used again later but makes displaying
-## temperature information much easier, there will be many ways that achieve this
-## in a much better way but it works and I am lazy. 
-## Please suggest a better way if you can!
+## Define weather conditions
 
-# define forecast function (shortens the need to type long name)
-forecast = forecastio.load_forecast(api_key, lat, lng)
+def weathercond():
 
-# defines current weather function and prints icon conditions and temperature to terminal
-current_weather = forecast.currently()
-print 'this is the first weather check, this will only be called once'
-print current_weather.icon
-new_temp = int(round(current_weather.temperature))
-print new_temp
-#set new_temp to be a string for later
-new_temp_s = str(new_temp)
+    # define forecast function (shortens the need to type long name)
+    global forecast
+    forecast = forecastio.load_forecast(api_key, lat, lng)
+
+    # defines current weather function and prints icon conditions and temperature to terminal
+    global current_weather
+    current_weather = forecast.currently()
+    print ctime()
+    print current_weather.icon
+    global new_temp
+    new_temp = int(round(current_weather.temperature))
+    print new_temp
+    print ''
+    #set new_temp to be a string for later
+    global new_temp_s
+    new_temp_s = str(new_temp)
 
 
 
@@ -206,6 +211,8 @@ def unicorn_scroll_lowercase(new_temp_s,text,colour,brightness,speed):
 
 def weatherloop():
 
+  weathercond()
+
   # define current time
   currenttime = time.localtime()
 
@@ -220,22 +227,6 @@ def weatherloop():
       unicorn.brightness(0.1)
   # set brightness for time of day
   setBrightness(currenttime)
-
-  # define forecast function (shortens the need to type long name)
-  forecast = forecastio.load_forecast(api_key, lat, lng)
-
-  # defines current weather function and prints icon conditions and temperature to terminal
-  current_weather = forecast.currently()
-  print ' '
-  print current_weather.icon
-  new_temp = int(round(current_weather.temperature))
-  print new_temp
-  #set new_temp to be a string for later
-  new_temp_s = str(new_temp)
-
-
-
-
 
 ## now we begin to start displaying the weather icon and displaying the temperature
 
