@@ -1,22 +1,22 @@
 #!/usr/bin/env python
 
 ##
-##              | | | |     (_)                    | |  | |          | | | |    
-##              | | | |_ __  _  ___ ___  _ __ _ __ | |  | | ___  __ _| |_| |__   ___ _ __ 
-##              | | | | '_ \| |/ __/ _ \| '__| '_ \| |/\| |/ _ \/ _` | __| '_ \ / _ \ '__|
-##              | |_| | | | | | (_| (_) | |  | | | \  /\  /  __/ (_| | |_| | | |  __/ | 
-##               \___/|_| |_|_|\___\___/|_|  |_| |_|\/  \/ \___|\__,_|\__|_| |_|\___|_|
+##				| | | |     (_)                    | |  | |          | | | |	
+##				| | | |_ __  _  ___ ___  _ __ _ __ | |  | | ___  __ _| |_| |__   ___ _ __ 
+##				| | | | '_ \| |/ __/ _ \| '__| '_ \| |/\| |/ _ \/ _` | __| '_ \ / _ \ '__|
+##				| |_| | | | | | (_| (_) | |  | | | \  /\  /  __/ (_| | |_| | | |  __/ | 
+##	 			 \___/|_| |_|_|\___\___/|_|  |_| |_|\/  \/ \___|\__,_|\__|_| |_|\___|_|
 ## 
-##  Code by:
-##          https://github.com/craio/
-##          https://github.com/pimoroni/unicorn-hat/        
-##          https://github.com/ZeevG/python-forecast.io/
+##	Code by:
+##			https://github.com/craio/
+##			https://github.com/pimoroni/unicorn-hat/		
+##			https://github.com/ZeevG/python-forecast.io/
 ##          https://github.com/xabertum/UnicornHatScroll 
 ##          https://github.com/topshed/UnicornHatScroll
 ##
 ##
-##  Check readme.md at https://github.com/Craio/RaspberryPi/blob/master/UnicornWeather/readme.md
-##  for information on how to use this. Forgive my bad code please!
+##	Check readme.md at https://github.com/Craio/RaspberryPi/blob/master/UnicornWeather/readme.md
+##	for information on how to use this. Forgive my bad code please!
 
 from random import randint
 from PIL import Image
@@ -35,8 +35,7 @@ api_key = ""
 # lng = -4.2425
 
 lat = 
-lng =
-
+lng = 
 
 #rotate display to show pngs with direction of the pi power cable facing 'up' to space
 unicorn.rotation(270)
@@ -245,15 +244,15 @@ def weatherloop():
   # if weather is cloudy, print cloud icon
   if current_weather.icon in ['partly-cloudy-day','partly-cloudy-night','cloudy','fog']:
       for o_x in range(int(imgcloud.size[0]/8)):
-    for o_y in range(int(imgcloud.size[1]/8)):
+	for o_y in range(int(imgcloud.size[1]/8)):
 
-        for x in range(8):
-            for y in range(8):
-                pixel = imgcloud.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncomment line below to enable printing pixel information to console window
-                #print(pixel)
-                r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
-                unicorn.set_pixel(x, y, r, g, b)
+		for x in range(8):
+			for y in range(8):
+				pixel = imgcloud.getpixel(((o_x*8)+y,(o_y*8)+x))
+                # uncomment line below to enable printing pixel information to console window
+				#print(pixel)
+				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
+				unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
                 time.sleep(60)
                 unicorn.clear()
@@ -273,14 +272,14 @@ def weatherloop():
   # if weather is sunny, print sun icon
   if current_weather.icon in ['clear-day']:
       for o_x in range(int(imgsun.size[0]/8)):
-    for o_y in range(int(imgsun.size[1]/8)):
+	for o_y in range(int(imgsun.size[1]/8)):
 
-        for x in range(8):
-            for y in range(8):
-                pixel = imgsun.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncomment line below to enable printing pixel information to console window
-                #print(pixel)
-                r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
+		for x in range(8):
+			for y in range(8):
+				pixel = imgsun.getpixel(((o_x*8)+y,(o_y*8)+x))
+                # uncomment line below to enable printing pixel information to console window
+				#print(pixel)
+				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
                                 unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
                 time.sleep(60)
@@ -301,15 +300,15 @@ def weatherloop():
   # if weather is clear at night, print moon icon
   if current_weather.icon in ['clear-night']:
       for o_x in range(int(imgmoon.size[0]/8)):
-    for o_y in range(int(imgmoon.size[1]/8)):
+	for o_y in range(int(imgmoon.size[1]/8)):
 
-        for x in range(8):
-            for y in range(8):
-                pixel = imgmoon.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncomment line below to enable printing pixel information to console window
-                #print(pixel)
-                r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
-                unicorn.set_pixel(x, y, r, g, b)
+		for x in range(8):
+			for y in range(8):
+				pixel = imgmoon.getpixel(((o_x*8)+y,(o_y*8)+x))
+                # uncomment line below to enable printing pixel information to console window
+				#print(pixel)
+				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
+				unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
                 time.sleep(60)
                 unicorn.clear()
@@ -329,15 +328,15 @@ def weatherloop():
   # if weather is rainy, print rain animation
   if current_weather.icon in ['rain','thunderstorm']:
       for o_x in range(int(imgrain.size[0]/8)):
-    for o_y in range(int(imgrain.size[1]/8)):
+	for o_y in range(int(imgrain.size[1]/8)):
 
-        for x in range(8):
-            for y in range(8):
-                pixel = imgrain.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncomment line below to enable printing pixel information to console window
-                #print(pixel)
-                r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
-                unicorn.set_pixel(x, y, r, g, b)
+		for x in range(8):
+			for y in range(8):
+				pixel = imgrain.getpixel(((o_x*8)+y,(o_y*8)+x))
+                # uncomment line below to enable printing pixel information to console window
+				#print(pixel)
+				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
+				unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
                 time.sleep(60)
                 unicorn.clear()
@@ -357,15 +356,15 @@ def weatherloop():
   # if weather is snowy, print snow animation
   if current_weather.icon in ['snow','sleet','hail']:
       for o_x in range(int(imgsnow.size[0]/8)):
-    for o_y in range(int(imgsnow.size[1]/8)):
+	for o_y in range(int(imgsnow.size[1]/8)):
 
-        for x in range(8):
-            for y in range(8):
-                pixel = imgsnow.getpixel(((o_x*8)+y,(o_y*8)+x))
-                                # uncomment line below to enable printing pixel information to console window
-                #print(pixel)
-                r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
-                unicorn.set_pixel(x, y, r, g, b)
+		for x in range(8):
+			for y in range(8):
+				pixel = imgsnow.getpixel(((o_x*8)+y,(o_y*8)+x))
+                # uncomment line below to enable printing pixel information to console window
+				#print(pixel)
+				r, g, b = int(pixel[0]),int(pixel[1]),int(pixel[2])
+				unicorn.set_pixel(x, y, r, g, b)
                 unicorn.show()
                 time.sleep(60)
                 unicorn.clear()
@@ -385,7 +384,7 @@ def weatherloop():
   # if weather is windy, print wind icon
   if current_weather.icon in ['wind','tornado']:
       for o_x in range(int(imgwind.size[0]/8)):
-    for o_y in range(int(imgwind.size[1]/8)):
+	for o_y in range(int(imgwind.size[1]/8)):
 
                 for x in range(8):
                         for y in range(8):
