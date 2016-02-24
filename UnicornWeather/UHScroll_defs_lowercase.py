@@ -663,6 +663,7 @@ mapping_lowercase['y'] = letter_y
 mapping_lowercase['z'] = letter_z
 
 
+mapping_lowercase['0'] = number_0
 mapping_lowercase['1'] = number_1
 mapping_lowercase['2'] = number_2
 mapping_lowercase['3'] = number_3
